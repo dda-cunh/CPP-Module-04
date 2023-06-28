@@ -1,8 +1,8 @@
 #include "../inc/WrongAnimal.hpp"
+#include "../inc/WrongCat.hpp"
 #include "../inc/Animal.hpp"
 #include "../inc/Dog.hpp"
 #include "../inc/Cat.hpp"
-#include "../inc/WrongCat.hpp"
 
 template<typename T>
 void test(T & obj)
@@ -13,6 +13,11 @@ void test(T & obj)
 	std::cout << RESET;
 }
 
+void clear()
+{
+    for(int i = 0; i < 30; i++)
+        std::cout << std::endl;
+}
 
 int main(void)
 {
@@ -26,7 +31,6 @@ int main(void)
 		const Animal*	animal_dog = new Dog();
 		const Animal*	animal_cat = new Cat();
 		std::cout << RESET;
-
 		test(animal_animal);
 		test(animal_dog);
 		test(animal_cat);
@@ -36,6 +40,9 @@ int main(void)
 		delete animal_animal;
 		std::cout << RESET;
 	}
+    std::cout << MAGENTA + "Press any key to continue" << RESET;
+    getwchar();
+    clear();
 	std::cout << CYAN + "TEST " << i++;
 	std::cout << RESET << std::endl << std::endl;
 	{
@@ -44,7 +51,6 @@ int main(void)
 		const WrongCat*		wcat_wact = new WrongCat();
 		const WrongAnimal*	wanimal_wcat = new WrongCat();
 		std::cout << RESET;
-
 		test(wanimal_Wanimal);
 		test(wcat_wact);
 		test(wanimal_wcat);
@@ -54,6 +60,9 @@ int main(void)
 		delete wanimal_Wanimal;
 		std::cout << RESET;
 	}
+    std::cout << MAGENTA + "Press any key to continue" << RESET;
+    getwchar();
+    clear();
 	std::cout << CYAN + "TEST " << i++;
 	std::cout << RESET << std::endl << std::endl;
 	{
@@ -62,7 +71,6 @@ int main(void)
 		const Dog*			dog_dog = new Dog();
 		const WrongAnimal*	wanimal_wcat = new WrongCat();
 		std::cout << RESET;
-
 		test(wanimal_Wanimal);
 		test(dog_dog);
 		test(wanimal_wcat);
