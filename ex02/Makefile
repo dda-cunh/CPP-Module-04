@@ -1,5 +1,5 @@
 .SILENT:
-NAME		= 	worldonfire
+NAME		= 	abstract
 
 CC 			= 	c++
 
