@@ -27,7 +27,7 @@ Animal::~Animal(void)
 	return ;
 }
 
-Animal::Animal(std::string const & type) : type(type)
+Animal::Animal(std::string const & newType) : type(newType)
 {
 	std::cout << "Animal parametric constructor called" << std::endl;
 	return ;

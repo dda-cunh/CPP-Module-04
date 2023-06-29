@@ -6,7 +6,7 @@ WrongCat::WrongCat(void) : WrongAnimal("WrongCat")
 	return ;
 }
 
-WrongCat::WrongCat(WrongCat const & src)
+WrongCat::WrongCat(WrongCat const & src) : WrongAnimal(src)
 {
 	std::cout << "WrongCat Copy constructor called" << std::endl;
 	*this = src;
@@ -27,7 +27,7 @@ WrongCat::~WrongCat(void)
 	return ;
 }
 
-WrongCat::WrongCat(std::string const & type) : WrongAnimal(type)
+WrongCat::WrongCat(std::string const & newType) : WrongAnimal(newType)
 {
 	return ;
 }

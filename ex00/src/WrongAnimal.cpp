@@ -27,7 +27,7 @@ WrongAnimal::~WrongAnimal(void)
 	return ;
 }
 
-WrongAnimal::WrongAnimal(std::string const & type) : type(type)
+WrongAnimal::WrongAnimal(std::string const & newType) : type(newType)
 {
 	std::cout << "WrongAnimal parametric constructor called" << std::endl;
 	return ;

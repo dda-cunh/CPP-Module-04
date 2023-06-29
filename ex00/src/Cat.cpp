@@ -6,7 +6,7 @@ Cat::Cat(void) : Animal("Cat")
 	return ;
 }
 
-Cat::Cat(Cat const & src)
+Cat::Cat(Cat const & src) : Animal(src)
 {
 	std::cout << "Cat Copy constructor called" << std::endl;
 	*this = src;
@@ -27,7 +27,7 @@ Cat::~Cat(void)
 	return ;
 }
 
-Cat::Cat(std::string const & type) : Animal(type)
+Cat::Cat(std::string const & newType) : Animal(newType)
 {
 	return ;
 }

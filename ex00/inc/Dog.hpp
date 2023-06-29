@@ -11,10 +11,8 @@ class	Dog : public Animal
 		Dog & operator=(Dog const & rhs);
 		~Dog(void);
 
-		Dog(std::string const & type);
+		Dog(std::string const & newType);
 		virtual void	makeSound(void) const;
-	protected:
-		std::string		type;
 };
 
 #endif

@@ -11,7 +11,7 @@ class	WrongCat : public WrongAnimal
 		WrongCat & operator=(WrongCat const & rhs);
 		~WrongCat(void);
 
-		WrongCat(std::string const & type);
+		WrongCat(std::string const & newType);
 };
 
 #endif

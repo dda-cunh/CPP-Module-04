@@ -6,7 +6,7 @@ Dog::Dog(void) : Animal("Dog")
 	return ;
 }
 
-Dog::Dog(Dog const & src)
+Dog::Dog(Dog const & src) : Animal(src)
 {
 	std::cout << "Dog Copy constructor called" << std::endl;
 	*this = src;
@@ -27,7 +27,7 @@ Dog::~Dog(void)
 	return ;
 }
 
-Dog::Dog(std::string const & type) : Animal(type)
+Dog::Dog(std::string const & newType) : Animal(newType)
 {
 	return ;
 }
