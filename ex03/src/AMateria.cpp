@@ -1,47 +1,45 @@
+#include "../inc/ICharacter.hpp"
 #include "../inc/AMateria.hpp"
 
 AMateria::AMateria(void) : type("AMateria")
 {
-	std::cout << "AMateria Default constructor called" << std::endl;
+	std::cout << RED << "AMateria Default constructor called" << RESET << std::endl;
 	return ;
 }
 
 AMateria::AMateria(AMateria const & src)
 {
-	std::cout << "AMateria Copy constructor called" << std::endl;
+	std::cout << RED << "AMateria Copy constructor called" << RESET << std::endl;
+	(void) src;
 	return ;
 }
 
 AMateria & AMateria::operator=(AMateria const & rhs)
 {
-	std::cout << "AMateria Copy Assignement operator called" << std::endl;
-	if (this != &rhs)
-	{
-		this->type = rhs.type;
-	}
+	std::cout << RED << "AMateria Copy Assignement operator called" << RESET << std::endl;
+	this = rhs.clone();
 	return (*this);
 }
 
 AMateria::~AMateria(void)
 {
-	std::cout << "AMateria Destructor called" << std::endl;
+	std::cout << RED << "AMateria Destructor called" << RESET << std::endl;
 	return ;
 }
 
 AMateria::AMateria(std::string const & newType) : type(newType)
 {
-	std::cout << "AMateria Parametric constructor called" << std::endl;
+	std::cout << RED << "AMateria Parametric constructor called" << RESET << std::endl;
 	return ;
 }
 
 void	AMateria::use(ICharacter & target)
 {
-	if (this->type.compare("ice") == 0)
-		std::cout << "* shoots an ice bolt at <name> *";
-	else if (this->type.compare("cure") == 0)
-		std::cout << "* heals <name>’s wounds *";
-	else
-		std::cout << "* bad use *";
-	std::cout << std::endl;
+	std::cout << "* " << this->type << " used on " << target.getName() << " *" << std::endl;
 	return ;
+}
+
+std::string const&	AMateria::getType() const
+{
+	return (this->type);
 }

@@ -9,10 +9,10 @@ class Ice : public AMateria
 		Ice(void);
 		Ice(Ice const & src);
 		Ice & operator=(Ice const & rhs);
-		virtual ~Ice(void);
+		~Ice(void);
 
-		Ice(std::string const & type);
-		virtual AMateria*	clone() const;
+		AMateria*	clone() const;
+		void	use(ICharacter& target);
 };
 
 #endif

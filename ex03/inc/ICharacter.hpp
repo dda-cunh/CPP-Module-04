@@ -1,7 +1,7 @@
 #ifndef	ICHARACTER_HPP
 # define ICHARACTER_HPP
 
-# include <iostream>
+# include "main.hpp"
 
 class ICharacter
 {
