@@ -55,11 +55,11 @@ void	Character::equip(AMateria* m)
 {
 	if (slot00 == NULL)
 		this->slot00 = m;
-	if (slot01 == NULL)
+	else if (slot01 == NULL)
 		this->slot01 = m;
-	if (slot02 == NULL)
+	else if (slot02 == NULL)
 		this->slot02 = m;
-	if (slot03 == NULL)
+	else if (slot03 == NULL)
 		this->slot03 = m;
 	return ;
 }

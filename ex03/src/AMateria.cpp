@@ -17,7 +17,7 @@ AMateria::AMateria(AMateria const & src)
 AMateria & AMateria::operator=(AMateria const & rhs)
 {
 	std::cout << RED << "AMateria Copy Assignement operator called" << RESET << std::endl;
-	this = rhs.clone();
+	(void)	rhs;
 	return (*this);
 }
 

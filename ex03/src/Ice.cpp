@@ -10,14 +10,15 @@ Ice::Ice(void) : AMateria("ice")
 Ice::Ice(Ice const & src) : AMateria("ice")
 {
 	std::cout << RED << "Ice Copy constructor called" << RESET << std::endl;
-	(void) src;
+	this->type = src.type;
 	return ;
 }
 
 Ice & Ice::operator=(Ice const & rhs)
 {
 	std::cout << RED << "Ice Copy Assignement operator called" << RESET << std::endl;
-	(void) rhs;
+	if (this != &rhs)
+		this->type = rhs.type;
 	return (*this);
 }
 

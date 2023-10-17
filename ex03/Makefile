@@ -3,7 +3,7 @@ NAME		= 	interface
 
 CC 			= 	c++
 
-CFLAGS		= 	-Wall -Wextra -Werror -std=c++98 -Wshadow -g
+CFLAGS		= 	-Wall -Wextra -Werror -std=c++98 -Wshadow -g #-fsanitize=address
 
 RM 			= 	rm -rf
 

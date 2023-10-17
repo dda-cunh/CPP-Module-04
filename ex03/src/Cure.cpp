@@ -10,14 +10,15 @@ Cure::Cure(void) : AMateria("cure")
 Cure::Cure(Cure const & src) : AMateria("cure")
 {
 	std::cout << RED << "Cure Copy constructor called" << RESET << std::endl;
-	(void) src;
+	this->type = src.type;
 	return ;
 }
 
 Cure & Cure::operator=(Cure const & rhs)
 {
 	std::cout << RED << "Cure Copy Assignement operator called" << RESET << std::endl;
-	(void) rhs;
+	if (this != &rhs)
+		this->type = rhs.type;
 	return (*this);
 }
 
